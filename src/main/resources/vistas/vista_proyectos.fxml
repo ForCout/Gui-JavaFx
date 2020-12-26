@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #DAF9F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Developers.controlador.controladorProyecto">
+   <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="180.0">
+         <children>
+            <TextField fx:id="nombretf" layoutX="20.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Nombre Proyecto">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="paistf" layoutX="20.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Pais">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="localizaciotf" layoutX="20.0" layoutY="229.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Localización">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="sociotf" layoutX="20.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Socio Local">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="financiadortf" layoutX="20.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Financiador">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="financiaciontf" layoutX="20.0" layoutY="388.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Financiación Aportada">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="finiciotf" layoutX="20.0" layoutY="447.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Inicio">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ffinaltf" layoutX="20.0" layoutY="498.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Finalización">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <Text layoutX="26.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyectos">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="comboP" layoutX="224.0" layoutY="120.0" prefHeight="39.0" prefWidth="487.0" />
+      <Button fx:id="volverbt" layoutX="662.0" layoutY="498.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#volver" prefHeight="24.0" prefWidth="99.0" text="Volver">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="eliminarbt" layoutX="541.0" layoutY="498.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eliminar" prefHeight="24.0" prefWidth="99.0" text="Eliminar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="modificarbt" layoutX="418.0" layoutY="501.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#modificar" prefHeight="24.0" prefWidth="99.0" text="Modificar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="anadirbt" layoutX="301.0" layoutY="501.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#guardar" prefHeight="24.0" prefWidth="99.0" text="Guardar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="nuevobt" layoutX="180.0" layoutY="501.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nuevo" prefHeight="24.0" prefWidth="99.0" text="Nuevo">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

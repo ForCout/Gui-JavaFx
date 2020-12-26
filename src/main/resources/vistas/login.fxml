@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="284.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Developers.controlador.controladorLogin">
+   <children>
+      <TextField fx:id="usuariotxt" layoutX="65.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="120.0" promptText="Usuario">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="lbStatus" layoutX="14.0" layoutY="72.0" text="Status" textFill="#e41515">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="94.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@login.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordtxt" layoutX="65.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="120.0" promptText="Contraseña">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <Button fx:id="loginbt" layoutX="65.0" layoutY="214.0" mnemonicParsing="false" onAction="#login" prefHeight="10.0" prefWidth="120.0" style="-fx-font-size: 10; -fx-background-color: EE908A;" text="Iniciar Sesión">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

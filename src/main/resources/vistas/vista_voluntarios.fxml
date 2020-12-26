@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="comboVoluntario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #DAF9F9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Developers.controlador.controladorVoluntario">
+   <children>
+    <AnchorPane layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="180.0">
+         <children>
+            <TextField fx:id="nombretf" layoutX="20.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Nombre">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="apellidostf" layoutX="20.0" layoutY="139.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Apellidos">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="direcciontf" layoutX="20.0" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Dirección">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailtf" layoutX="20.0" layoutY="233.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Email">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="paistf" layoutX="20.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Pais">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tipovoluntariotf" layoutX="20.0" layoutY="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Tipo Voluntario">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="fingresotf" layoutX="20.0" layoutY="374.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="140.0" promptText="Fecha Ingreso">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <Text layoutX="15.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voluntarios">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="comboV" layoutX="281.0" layoutY="83.0" prefHeight="20.0" prefWidth="433.0" style="-fx-background-color: #DFE3E3;" />
+      <Button fx:id="volverbt" layoutX="660.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#volver" prefHeight="24.0" prefWidth="99.0" text="Volver">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="eliminarbt" layoutX="541.0" layoutY="428.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eliminar" prefHeight="24.0" prefWidth="93.0" text="Eliminar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="guardarbt" layoutX="431.0" layoutY="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#guardar" prefHeight="24.0" prefWidth="86.0" text="Guardar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="modificarbt" layoutX="301.0" layoutY="428.0" mnemonicParsing="false" onAction="#modificar" prefHeight="24.0" prefWidth="99.0" text="Modificar">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="nuevobt" layoutX="180.0" layoutY="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nuevo" prefHeight="24.0" prefWidth="93.0" text="Nuevo">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
