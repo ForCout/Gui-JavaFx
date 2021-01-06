@@ -3,18 +3,23 @@ package com.Developers.controlador;
 import java.net.URL;
 import java.util.ResourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import com.Developers.modelo.Proyecto;
+import com.Developers.modelo.Voluntario;
 import com.Developers.repository.ProyectoRepository;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.SelectionModel;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+@Controller
 public class controladorProyecto implements Initializable{
 	 @FXML
 	    private TextField finiciotf;
@@ -58,8 +63,13 @@ public class controladorProyecto implements Initializable{
 	    @FXML
 	    private TextField ffinaltf;
 	    
+	    @FXML
+	    private Button guardarCambiostf;
+	    
 	    @Autowired
 	    private ProyectoRepository proyectoRepository;
+	    
+	    ObservableList<Proyecto>listaProyectos = FXCollections.observableArrayList();
 
     @FXML
     void guardar(ActionEvent event) {
@@ -73,7 +83,10 @@ public class controladorProyecto implements Initializable{
     	proyecto.setFinanciador(financiadortf.getText());
     	proyecto.setFinanciacionAportada(Integer.parseInt(financiaciontf.getText()));
     	proyecto.setFechaInicio(finiciotf.getText());
-        proyecto.setFechaFinalizacion(ffinaltf.getText());   	
+        proyecto.setFechaFinalizacion(ffinaltf.getText());  
+        
+        proyectoRepository.save(proyecto);
+        comboP.setItems(FXCollections.observableArrayList(proyectoRepository.findAll()));
     	
     
 		
@@ -84,6 +97,57 @@ public class controladorProyecto implements Initializable{
 
     @FXML
     void modificar(ActionEvent event) {
+    	
+    	
+    	SelectionModel<Proyecto> sm = comboP.getSelectionModel();
+
+		String nombre = sm.getSelectedItem().getNombreProyecto();
+		nombretf.setText(nombre);
+		String pais = sm.getSelectedItem().getPais();
+		paistf.setText(pais);
+		String localizacion = sm.getSelectedItem().getLocalizacion();
+		localizaciotf.setText(localizacion);
+		String socioL = sm.getSelectedItem().getSocioLocal();
+		sociotf.setText(socioL);
+		String financiador = sm.getSelectedItem().getFinanciador();
+		financiadortf.setText(financiador);
+		Integer  financiacion = sm.getSelectedItem().getFinanciacionAportada();
+		financiaciontf.setText(String.valueOf(financiacion));
+	
+		String fechaI = sm.getSelectedItem().getFechaInicio();
+	    finiciotf.setText(fechaI);
+	    String fechaf = sm.getSelectedItem().getFechaFinalizacion();
+        ffinaltf.setText(fechaf);
+        
+		guardarCambiostf.setDisable(false);
+
+
+    }
+    
+    @FXML
+    void guardarCambios(ActionEvent event) {
+    	
+
+		Proyecto proyecto = new Proyecto();
+		SelectionModel<Proyecto> sm = comboP.getSelectionModel();
+		Long idLong = sm.getSelectedItem().getCodigoProyecto();
+		
+		proyecto.setCodigoProyecto(idLong);
+		proyecto.setNombreProyecto(nombretf.getText());
+    	proyecto.setPais(paistf.getText());
+    	proyecto.setLocalizacion(localizaciotf.getText());
+    	proyecto.setSocioLocal(sociotf.getText());
+    	proyecto.setFinanciador(financiadortf.getText());
+    	proyecto.setFinanciacionAportada(Integer.parseInt(financiaciontf.getText()));
+    	proyecto.setFechaInicio(finiciotf.getText());
+        proyecto.setFechaFinalizacion(ffinaltf.getText());  
+        
+        
+        proyectoRepository.save(proyecto);
+        comboP.setItems(FXCollections.observableArrayList(proyectoRepository.findAll()));
+    	guardarCambiostf.setDisable(true);
+        
+        
 
     }
 
@@ -127,7 +191,9 @@ public class controladorProyecto implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Esbozo de método generado automáticamente
+		
+		guardarCambiostf.setDisable(true);
+		comboP.setItems(FXCollections.observableArrayList(proyectoRepository.findAll()));
 		
 	}
 

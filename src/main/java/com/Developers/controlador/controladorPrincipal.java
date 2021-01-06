@@ -3,16 +3,10 @@ package com.Developers.controlador;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Controller;
-
 import com.Developers.modelo.Voluntario;
-import com.Developers.repository.VoluntarioRepository;
-
-import ch.qos.logback.core.util.Loader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,8 +18,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import com.Developers.OngApplication;
-import com.Developers.controlador.controladorVoluntario;
 
 
 @Controller
@@ -49,26 +41,15 @@ public class controladorPrincipal implements Initializable {
    
     @Autowired
     private ConfigurableApplicationContext springContext;
-    private Parent root;
-   ;
+    //private Parent root;
+   
 	
 
-	@FXML
-	public void irsocio(ActionEvent event) throws IOException {
-		
-
-		   FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/vista_socios.fxml"));
-		   loader.setControllerFactory(springContext::getBean);
-		   Parent root = loader.load();
-			Scene scene = new Scene(root);
-			Stage stage = new Stage();
-			stage.setScene(scene);
-			stage.show();
     
-	}
+	
 	
 	@FXML
-	public  void irvoluntario(ActionEvent event) throws Exception {
+	void irvoluntario(ActionEvent event) throws Exception {
 		
 			
 
@@ -96,6 +77,20 @@ public class controladorPrincipal implements Initializable {
     
 		 
 		
+	}
+	
+
+	@FXML
+	 void irsocio(ActionEvent event) throws IOException {
+		
+
+		   FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/vista_socios.fxml"));
+		   loader.setControllerFactory(springContext::getBean);
+		   Parent root = loader.load();
+			Scene scene = new Scene(root);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
 	}
 
 

@@ -50,6 +50,11 @@
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Text>
+            <Button fx:id="guardarCambiostf" layoutX="41.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#guardarCambios" prefHeight="24.0" prefWidth="99.0" text="Guardar Cambios">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <ComboBox fx:id="comboV" layoutX="281.0" layoutY="83.0" prefHeight="20.0" prefWidth="433.0" style="-fx-background-color: #DFE3E3;" />

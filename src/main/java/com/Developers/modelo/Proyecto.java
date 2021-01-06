@@ -126,10 +126,8 @@ public class Proyecto implements Serializable  {
 
 	@Override
 	public String toString() {
-		return "Proyecto [id = " + id + ", nombreProyecto = " + nombreProyecto + ", pais = " + pais + ", localizacion = "
-				+ localizacion + ", fechaInicio = " + fechaInicio + ", fechaFinalizacion = " + fechaFinalizacion
-				+ ", socioLocal = " + socioLocal + ", financiador = " + financiador + ", financiacionAportada = "
-				+ financiacionAportada + "]";
+		return " "+ id + "  - "+ nombreProyecto + " - " + pais + " - "+ localizacion + " - "+fechaInicio +" - " + fechaFinalizacion
+				+ "  - "  +socioLocal + " - " + financiador + " - "+ financiacionAportada ;
 	}
 
 	

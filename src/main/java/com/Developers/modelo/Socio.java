@@ -107,8 +107,7 @@ public class Socio  {
 
 	@Override
 	public String toString() {
-		return "Socio [Id = " + id + ",nombre = " + nombre + ", apellidos = " + apellidos + ", direccion = " + direccion
-				+ ", email = " + email + ", tipoCuota = " + tipoCuota + ", fecha_ingreso = " + fecha_ingreso + "]";
+		return id + " - " + nombre + " - " + apellidos + " - " + direccion + " - " + email + " - " + tipoCuota + " - " + fecha_ingreso ;
 	}
 	
 	
